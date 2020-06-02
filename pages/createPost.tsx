@@ -33,7 +33,6 @@ class CreatePost extends React.Component {
 
     submitNewPost = event => {
         event.preventDefault();
-        console.log('yeyeyeys');
         this.props.createPostAction(this.state.title, this.state.body)
     };
 
@@ -44,7 +43,7 @@ render () {
             <Nav/>
             <div>
                 <form>
-                    <div className="form-group">
+                    <div>
                         <label>
                             Введите заголовок поста
                             <input className="form-control" type='text'
@@ -53,10 +52,10 @@ render () {
                             ></input>
                         </label>
                     </div>
-                    <div className="form-group">
+                    <div>
                         <label>
                             Введите содержание
-                            <input className="form-control" type='password'
+                            <input type='text'
                                    value={this.state.body}
                                    onChange={this.handleSetBody}
                             ></input>
@@ -69,7 +68,6 @@ render () {
                     </div>
 
                 </form>
-
             </div>
         </>
     )}
