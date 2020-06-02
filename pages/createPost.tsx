@@ -46,7 +46,7 @@ render () {
                     <div>
                         <label>
                             Введите заголовок поста
-                            <input className="form-control" type='text'
+                            <input type='text'
                                    value={this.state.title}
                                    onChange={this.handleSetTitle}
                             ></input>
