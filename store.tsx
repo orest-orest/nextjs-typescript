@@ -12,7 +12,6 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action: any) => {
-    console.log('step3');
     switch (action.type) {
         case RECIEVE_POSTS_LIST:
             return Object.assign({}, state, {
