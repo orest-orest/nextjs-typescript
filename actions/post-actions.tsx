@@ -17,18 +17,6 @@ export function createPostAction(title, body) {
 }
 
 
-// export const fetchPosts = () => {
-//     // @ts-ignore
-//     return async dispatch => {
-//     //@ts-ignore
-//         const req = new Request(apiKey);
-//         let json = await fetch(apiKey).then(response => response.json());
-//         //@ts-ignore
-//        dispatch(receivePosts(json));
-//
-//     };
-// };
-
 export async function getStaticProps() {
     const res = await fetch('https://simple-blog-api.crew.red/posts');
     const json = await res.json();
@@ -39,20 +27,3 @@ export async function getStaticProps() {
         },
     }
 }
-
-
-// export const fetchData = () => {
-//     console.log('step2')
-//     return (dispatch) => {
-//         return axios.get(apiKey)
-//             .then(response => {
-//                 return response.data
-//             })
-//             .then(data => {
-//                 dispatch(receivePosts)
-//             })
-//             .catch(error => {
-//                 throw (error);
-//             });
-//     };
-// };
