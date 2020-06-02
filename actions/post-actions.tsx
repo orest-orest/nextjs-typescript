@@ -16,14 +16,3 @@ export function createPostAction(title, body) {
     };
 }
 
-
-export async function getStaticProps() {
-    const res = await fetch('https://simple-blog-api.crew.red/posts');
-    const json = await res.json();
-
-    return {
-        props: {
-           json
-        },
-    }
-}
