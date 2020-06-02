@@ -21,11 +21,9 @@ export default function LatestPosts({post}) {
 
 
     const dispatch = useDispatch();
-    console.log('step1');
     dispatch(receivePosts(post));
 
     const state = useSelector((state) => state.postList);
-    console.log(state);
 
     const listItems = state.map((state) =>
         <li>
